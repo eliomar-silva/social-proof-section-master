@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap');
+
+:root {
+  /* ### Primary */
+  --Very-Dark-Magenta: hsl(300, 43%, 22%);
+  --Soft-Pink: hsl(333, 80%, 67%);
+
+  /* ### Neutral */
+  --Dark-Grayish-Magenta: hsl(303, 10%, 53%);
+  --Light-Grayish-Magenta: hsl(300, 24%, 96%);
+  --White: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'League Spartan', sans-serif;
+}
+
+html {
+  font-size: 15px;
+}
+body {
+  text-align: center;
+  background-color: var(--White);
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+}
+body::before{
+  content: "";
+  position: absolute; 
+  left: 0;
+  top: 0;
+  background-image: url(./images/bg-pattern-top-mobile.svg),url(./images/bg-pattern-bottom-mobile.svg);
+  background-position: top -0vh left 0vw,  bottom -30vh right -0vw;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.container {
+  padding:5rem 2rem;
+}
+.header h1 {
+  color: var(--Very-Dark-Magenta);
+  font-size: 2.8em;
+  margin-bottom: 1.5rem;
+}
+.header p {
+  color: var(--Dark-Grayish-Magenta);
+  font-size: 1.14em;
+  line-height: 1.1em;
+  margin-bottom: 2.5em;
+}
+.container-roted {
+  margin-bottom: 3.35em;
+}
+.container-roted-star {
+  margin-bottom: 1rem;
+  padding: 0.9rem;
+  background-color: var(--Light-Grayish-Magenta);
+  border-radius: 0.4em;
+}
+.container-roted-star .reted-comment {
+  font-weight: 700;
+  color: var(--Very-Dark-Magenta);
+  font-size: 1.1em;
+  margin-top: 0.8em;
+}
+.review-comment {
+  background-color: var(--Very-Dark-Magenta);
+  padding: 2.5rem 2rem;
+  text-align: left;
+  margin-bottom: 1em;
+  border-radius: 0.6em;
+  color: var(--Light-Grayish-Magenta);
+  font-size: 0.9em;
+}
+.review-comment .container-people-comment {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 1.6em;
+}
+.review-comment .container-people-comment  img{
+  border-radius: 50%;
+  width: 3.3rem;
+  margin-right: 1.7rem;
+}
+
+.container-people-comment .container-name p{
+  color: var(--Soft-Pink);
+  font-size: 1.15em;
+  margin-top: 0.2em;
+
+}
+.review-comment .comment{
+  font-weight: 500;
+  line-height: 1.4em;
+  font-size: 1.2em;
+}
+@media (min-width: 1024px) {
+  html {
+    font-size: 15.5px; /**/
+  }
+
+  body {
+    display: flex;
+    justify-content: center;
+  }
+
+  body::before{ 
+    background-image: url(./images/bg-pattern-top-desktop.svg), url(./images/bg-pattern-bottom-desktop.svg);
+    background-position: top 0vh left 0vw, bottom 0vh right 0vw;
+    background-size: 45rem, 73rem;
+  }
+
+  .container {    
+    padding: 7rem 8%; /**/
+    max-width: 1440px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 100%;
+    min-height: 100vh;
+    gap: 1.5rem;
+  }
+  .container-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+  }
+  .header p {
+    margin: 0;
+  }
+  .container-top .container-roted,
+  .container-top .header{
+    width: 50%;
+  }
+  .container-top .header{
+    text-align: left;
+    padding-right: 5rem;
+  }
+  
+  .container-top .header h1{
+    font-size: 3.5em;  
+  }
+
+  .container-top .container-roted {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    margin: 0;
+  }
+  .container-roted .container-roted-star{
+    min-width: 26rem;
+    font-size: 0.9em;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 1rem 2.2rem;
+  }
+  .container-roted .container-roted-star:nth-child(1){
+    margin-right: 10%;
+   
+  }
+  .container-roted .container-roted-star:nth-child(2){
+    margin-right: 5%;
+    
+  }
+  .container-roted-star .group-star img{
+    width: 0.9rem;
+  }
+  .container-roted-star .reted-comment{
+    margin: 0;
+    margin-left: 2em;
+  }
+  
+  .container-review-comment {
+    display: flex;    
+    align-items: flex-end;
+    font-size: 0.9em;
+  }
+  .container-review-comment .review-comment{
+    margin: 0;   
+    padding: 2rem 1.8rem;
+    min-height: 16rem;
+  }
+  .container-review-comment .review-comment:nth-child(1){
+    margin-bottom: 4%;
+    margin-right: 2rem;
+  }
+  .container-review-comment .review-comment:nth-child(2){
+    margin-bottom: 2%;
+    margin-right: 2rem;
+  }
+  .review-comment .container-people-comment {
+    margin-bottom: 1.85rem;
+  }
+  .review-comment .container-people-comment img {
+    width: 2.7rem;
+    margin-right: 1.5rem;
+  }
+  .review-comment .comment {
+    font-size: 1.169em;
+  }
+  
+}
+@media (min-width: 1440px) {
+  html {
+    font-size: 17px;
+  }
+
+  .container {
+    padding: 9rem;   
+  } 
+  .container-review-comment .review-comment{
+    min-height: auto;
+  }
+}
+@media (min-width: 1740px) {
+  html {
+    font-size: 20px;
+  }
+  .container {
+    padding: 2rem 5rem;   
+  } 
+  body {
+    overflow: hidden;
+  }
+
+
+}
